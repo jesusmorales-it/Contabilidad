@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damián Landa Vargas | Contabilidad General</title>
+    <style>
+        /* Variables de colores para un diseño moderno y profesional */
+        :root {
+            --primary-blue: #1e3a8a;
+            --secondary-blue: #3b82f6;
+            --dark-gray: #1f2937;
+            --light-gray: #f3f4f6;
+            --white: #ffffff;
+        }
+
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: var(--dark-gray);
+            background-color: var(--light-gray);
+            line-height: 1.6;
+        }
+
+        /* Navegación */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-blue);
+        }
+
+        .logo span {
+            color: var(--secondary-blue);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary-blue);
+        }
+
+        /* Sección Hero (Principal) */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-gray));
+            color: var(--white);
+            padding: 12rem 5% 8rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #d1d5db;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-blue);
+            color: var(--white);
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        /* Secciones Generales */
+        section {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 3rem;
+        }
+
+        /* Sobre Mí */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-blue);
+        }
+
+        .about-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--secondary-blue);
+        }
+
+        /* Servicios */
+        .services {
+            background-color: var(--white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: var(--light-gray);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .service-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* Contacto */
+        .contact-container {
+            background-color: var(--white);
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-gray);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 5%;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            nav ul {
+                display: none; /* En un proyecto real aquí iría un menú hamburguesa */
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Damián Landa <span>Vargas</span></div>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#sobre-mi">El Contador</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <h1>Tranquilidad Financiera para tu Negocio</h1>
+            <p>Servicios de contabilidad general, precisos y confiables. Deja los números en manos de expertos para que tú puedas enfocarte en hacer crecer tu empresa.</p>
+            <a href="#contacto" class="btn">Agenda una Asesoría</a>
+        </section>
+
+        <section id="servicios" class="services">
+            <h2 class="section-title">Contabilidad General</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Registro Contable</h3>
+                    <p>Mantenemos tus libros contables al día, registrando cada movimiento financiero con precisión para reflejar la realidad de tu empresa.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Cálculo de Impuestos</h3>
+                    <p>Determinación y presentación oportuna de tus obligaciones fiscales para evitar multas y recargos con las autoridades.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Estados Financieros</h3>
+                    <p>Elaboración de balances generales y estados de resultados claros que te ayudarán a tomar mejores decisiones de negocio.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Gestión de Nóminas</h3>
+                    <p>Cálculo exacto de sueldos, retenciones y aportaciones de seguridad social para el bienestar de tus empleados y tu cumplimiento legal.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre-mi">
+            <div class="about-grid">
+                <div class="about-card">
+                    <h2>Damián Landa Vargas</h2>
+                    <h3 style="color: var(--dark-gray); margin-bottom: 1rem;">Contador Principal</h3>
+                    <p>Con un enfoque ético, transparente y altamente analítico, mi objetivo es ser el aliado estratégico que tu negocio necesita. Entiendo que detrás de cada factura y cada balance hay el esfuerzo de una empresa, por lo que trato cada cuenta con el mayor rigor y profesionalismo.</p>
+                    <br>
+                    <p>Especialista en <strong>Contabilidad General</strong>, brindo soluciones a la medida, asegurando el cumplimiento de la normativa vigente y optimizando los recursos financieros de mis clientes.</p>
+                </div>
+                <div class="about-image" style="background-color: var(--light-gray); border-radius: 10px; height: 100%; min-height: 300px; display: flex; align-items: center; justify-content: center; color: #9ca3af;">
+                    <p>[ Espacio para Fotografía Profesional ]</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2 class="section-title">¿Hablamos de tus Finanzas?</h2>
+            <div class="contact-container">
+                <p style="margin-bottom: 2rem; font-size: 1.1rem;">Contáctame hoy mismo para analizar la situación contable de tu negocio y diseñar un plan de trabajo adaptado a tus necesidades.</p>
+                <p><strong>Email:</strong> contacto@damianlandavargas.com</p>
+                <p><strong>Teléfono:</strong> +52 (55) 1234-5678</p>
+                <p><strong>Ubicación:</strong> Ciudad de México, México</p>
+                <br>
+                <a href="mailto:contacto@damianlandavargas.com" class="btn">Enviar un Correo</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Damián Landa Vargas - Contador Principal. Todos los derechos reservados.</p>
+        <p style="font-size: 0.8rem; margin-top: 0.5rem; color: #9ca3af;">Especialistas en Contabilidad General</p>
+    </footer>
+
+</body>
+</html>
