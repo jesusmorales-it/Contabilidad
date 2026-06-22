@@ -61,7 +61,7 @@
         nav ul {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 1.5rem;
         }
 
         nav ul li a {
@@ -113,6 +113,14 @@
             transform: translateY(-2px);
         }
 
+        .btn-dark {
+            background-color: var(--dark-gray);
+        }
+
+        .btn-dark:hover {
+            background-color: #111827;
+        }
+
         /* Secciones Generales */
         section {
             padding: 5rem 5%;
@@ -149,6 +157,18 @@
             border-left: 5px solid var(--secondary-blue);
         }
 
+        /* Clase para la nueva imagen de contabilidad */
+        .about-image {
+            border-radius: 10px;
+            height: 100%;
+            min-height: 350px; /* Un poco más alto para mejor visualización */
+            /* Imagen de stock profesional de contabilidad */
+            background-image: url('https://images.unsplash.com/photo-1554224155-6726b3fc858f?q=80&w=800&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
         /* Servicios */
         .services {
             background-color: var(--white);
@@ -156,7 +176,7 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
         }
 
@@ -177,6 +197,18 @@
             color: var(--primary-blue);
             margin-bottom: 1rem;
             font-size: 1.5rem;
+        }
+
+        /* Más Servicios Banner */
+        .more-services-container {
+            background-color: var(--white);
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            border-top: 5px solid var(--dark-gray);
         }
 
         /* Contacto */
@@ -202,10 +234,14 @@
                 grid-template-columns: 1fr;
             }
             nav ul {
-                display: none; /* En un proyecto real aquí iría un menú hamburguesa */
+                display: none;
             }
             .hero h1 {
                 font-size: 2rem;
+            }
+            .about-image {
+                min-height: 250px;
+                order: -1; /* Muestra la imagen arriba en móviles */
             }
         }
     </style>
@@ -219,6 +255,7 @@
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#mas-servicios">Más Servicios</a></li>
                 <li><a href="#sobre-mi">El Contador</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
@@ -256,8 +293,18 @@
             </div>
         </section>
 
-        <!-- Sección Sobre el Contador -->
-        <section id="sobre-mi">
+        <!-- Sección: Más Servicios (TI) -->
+        <section id="mas-servicios">
+            <h2 class="section-title">Más Servicios</h2>
+            <div class="more-services-container">
+                <h3 style="color: var(--primary-blue); font-size: 1.8rem; margin-bottom: 1rem;">Tecnologías de la Información (TI)</h3>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem;">Además de la gestión contable, ofrecemos soluciones tecnológicas de primer nivel. Impulsa la transformación digital de tu empresa, optimiza tus procesos y mejora tu infraestructura con nuestros servicios especializados en TI.</p>
+                <a href="https://www.infinity-technologies.company/" target="_blank" class="btn btn-dark">Conocer Servicios de TI</a>
+            </div>
+        </section>
+
+        <!-- Sección Sobre el Contador (ACTUALIZADA) -->
+        <section id="sobre-mi" class="services">
             <div class="about-grid">
                 <div class="about-card">
                     <h2>Damián Landa Vargas</h2>
@@ -266,10 +313,8 @@
                     <br>
                     <p>Especialista en <strong>Contabilidad General</strong>, brindo soluciones a la medida, asegurando el cumplimiento de la normativa vigente y optimizando los recursos financieros de mis clientes.</p>
                 </div>
-                <div class="about-image" style="background-color: var(--light-gray); border-radius: 10px; height: 100%; min-height: 300px; display: flex; align-items: center; justify-content: center; color: #9ca3af;">
-                    <!-- Aquí puedes colocar tu fotografía -->
-                    <p>[ Espacio para Fotografía Profesional ]</p>
-                </div>
+                <!-- El recuadro gris ha sido reemplazado por esta clase que carga una imagen profesional -->
+                <div class="about-image"></div>
             </div>
         </section>
 
@@ -279,7 +324,6 @@
             <div class="contact-container">
                 <p style="margin-bottom: 2rem; font-size: 1.1rem;">Contáctame hoy mismo para analizar la situación contable de tu negocio y diseñar un plan de trabajo adaptado a tus necesidades.</p>
                 
-                <!-- DATOS DE CONTACTO ACTUALIZADOS -->
                 <p><strong>Email:</strong> dlv@kardam-contadores.net</p>
                 <p><strong>Teléfono:</strong> 442 191 6152</p>
                 <p><strong>Ubicación:</strong> México</p>
@@ -292,7 +336,7 @@
     <!-- Pie de página -->
     <footer>
         <p>&copy; 2026 Damián Landa Vargas - Contador Principal. Todos los derechos reservados.</p>
-        <p style="font-size: 0.8rem; margin-top: 0.5rem; color: #9ca3af;">Especialistas en Contabilidad General</p>
+        <p style="font-size: 0.8rem; margin-top: 0.5rem; color: #9ca3af;">Especialistas en Contabilidad General y TI</p>
     </footer>
 
 </body>
